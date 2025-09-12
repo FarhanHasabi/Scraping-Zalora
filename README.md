@@ -1,7 +1,5 @@
 # Zalora Product Scraper
-Script ini digunakan untuk mengambil data produk dari endpoint publik Zalora:
-
-Contoh penggunaannya ada pada file Python di repo ini.
+Script ini digunakan untuk mengambil data produk dari endpoint publik Zalora. Endpoint didapatkan dengan menelusuri Network tab setelah web memberikan respons. Contoh penggunaannya ada pada file Python di repo ini.
 
 ## Contoh Respons API (potongan)
 
@@ -24,21 +22,23 @@ Contoh penggunaannya ada pada file Python di repo ini.
   },
   "ProductUrl": "p/nike-downshifter-12-men-s-road-running-shoes-grey-3837262"
 }
-Penjelasan Parameter Utama
-Parameter	Keterangan
-ConfigSku	SKU unik produk di Zalora
-Name	Nama produk
-Brand	Merek produk
-Price	Harga normal dalam string
-SpecialPrice	Harga promo (jika ada)
-PriceInDecimal	Harga normal dalam angka
-SpecialPriceInDecimal	Harga promo dalam angka
-ImageList	Daftar URL gambar produk
-MainImageUrl	URL gambar utama produk
-Breadcrumbs	Hirarki kategori produk
-MarkdownLabel	Label diskon/promosi (bila ada)
-SpecialLabel	Label khusus seperti “trending”
-SupplierName	Nama penjual/supplier (misalnya “ZALORA”)
-ReviewStatistics.AvgRating	Rata-rata rating produk
-ReviewStatistics.ReviewCount	Jumlah ulasan yang diterima produk
-ProductUrl	Path URL produk (gabungkan dengan https://www.zalora.co.id/)
+```
+Penjelasan Parameter yang ada di response itu:
+| Parameter                     | Keterangan                                               |
+|-------------------------------|----------------------------------------------------------|
+| `ConfigSku`                   | SKU unik produk di Zalora                                |
+| `Name`                        | Nama produk                                              |
+| `Brand`                       | Merek produk                                             |
+| `Price`                       | Harga normal dalam string                                |
+| `SpecialPrice`                | Harga promo (jika ada)                                   |
+| `PriceInDecimal`              | Harga normal dalam angka                                 |
+| `SpecialPriceInDecimal`       | Harga promo dalam angka                                  |
+| `ImageList`                   | Daftar URL gambar produk                                 |
+| `MainImageUrl`                | URL gambar utama produk                                  |
+| `Breadcrumbs`                 | Hirarki kategori produk                                  |
+| `MarkdownLabel`               | Label diskon/promosi (bila ada)                          |
+| `SpecialLabel`                | Label khusus seperti “trending”                          |
+| `SupplierName`                | Nama penjual/supplier (misalnya “ZALORA”)                |
+| `ReviewStatistics.AvgRating`  | Rata-rata rating produk                                  |
+| `ReviewStatistics.ReviewCount`| Jumlah ulasan yang diterima produk                       |
+| `ProductUrl`                  | Path URL produk (gabungkan dengan `https://www.zalora.co.id/`) |
