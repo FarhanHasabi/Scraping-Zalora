@@ -40,6 +40,9 @@ while len(all_records) < total_needed:
         break  # sudah habis produknya
 
     for p in products:
+        # cek field tambahan jika ada
+        review_stats = p.get("ReviewStatistics", {}) or {}
+
         all_records.append({
             "sku": p.get("ConfigSku"),
             "name": p.get("Name"),
@@ -48,7 +51,10 @@ while len(all_records) < total_needed:
             "special_price": p.get("SpecialPrice"),
             "url": "https://www.zalora.co.id/" + p.get("ProductUrl", ""),
             "image": p.get("MainImageUrl"),
-            "discount": p.get("MarkdownLabel")
+            "discount": p.get("MarkdownLabel"),
+            "seller_name": p.get("SupplierName"),
+            "rating": review_stats.get("AvgRating"),
+            "review_count": review_stats.get("ReviewCount")
         })
 
     offset += len(products)  # geser offset sesuai jumlah produk
