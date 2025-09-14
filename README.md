@@ -42,3 +42,20 @@ Penjelasan Parameter yang ada di response itu:
 | `ReviewStatistics.AvgRating`  | Rata-rata rating produk                                  |
 | `ReviewStatistics.ReviewCount`| Jumlah ulasan yang diterima produk                       |
 | `ProductUrl`                  | Path URL produk (gabungkan dengan `https://www.zalora.co.id/`) |
+
+## Cara Menggunakan
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/reponame.git
+   cd reponame
+   Install dependensi:
+
+2. Install dependensi
+   ```bash   
+   pip install -r requirements.txt
+
+3. Jalankan script scraping:
+   ```bash
+   python scrape_zalora.py
+
+
