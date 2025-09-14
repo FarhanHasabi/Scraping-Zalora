@@ -46,9 +46,8 @@ Penjelasan Parameter yang ada di response itu:
 ## Cara Menggunakan
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/reponame.git
-   cd reponame
-   Install dependensi:
+   git clone https://github.com/FarhanHasabi/Scraping-Zalora.git
+   cd Scraping-Zalora
 
 2. Install dependensi
    ```bash   
